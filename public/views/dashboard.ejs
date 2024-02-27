@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/dashBoard_style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="logo">
+            <img src="./images/platform.jpg" alt="" />
+            <span class="nav-item">Platform</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-user"></i>
+            <span class="nav-item">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="bx bx-stats"></i>
+            <span class="nav-item">Stats</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="logout">
+            <i class="bx bx-log-out"></i>
+            <span class="nav-item">Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <!-- <a href="/tictactoe"> -->
+      <div class="game1">
+        <p>Tic-tac-toe</p>
+      </div>
+      <!-- </a> -->
+      <div class="game2">
+        <p>Keys rush</p>
+      </div>
+      <div class="game3">
+        <p>Snake</p>
+      </div>
+    </div>
+    <script>
+      const gameDiv = document.querySelector(".game1");
+
+      gameDiv.addEventListener("click", () => {
+        // Navigate to the desired URL using window.location.href
+        window.location.href = "/tictactoe";
+      });
+    </script>
+  </body>
+</html>

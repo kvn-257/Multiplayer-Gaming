@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/index_style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="index.html">
+        <h1 id="title">Login</h1>
+
+        <div id="name" class="name">
+          <input type="text" placeholder="Name" />
+          <i class="bx bxs-user"></i>
+        </div>
+
+        <div class="input-box">
+          <input type="text" placeholder="Username" required />
+          <i class="bx bxs-user"></i>
+        </div>
+
+        <div class="input-box">
+          <input type="password" placeholder="Password" required />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <div class="remember-forget">
+          <label><input type="checkbox" />Remember me</label>
+          <a href="#">Forget password?</a>
+        </div>
+
+        <button id="btn" type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+          <p id="text">Don't have an account?</p>
+          <button type="menu" id="signup" class="signup">Register</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      let signupbtn = document.getElementById("signup");
+      let name = document.getElementById("name");
+      let title = document.getElementById("title");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let a = 0;
+      btn.onclick = function () {
+        if (a == 0) {
+          window.location.href = "../../Dashboard/index.html";
+        } else {
+          window.location.reload();
+        }
+      };
+      signupbtn.onclick = function () {
+        if (a == 0) {
+          name.style.maxHeight = "50px";
+          text.innerText = "Already have an account?";
+          title.innerHTML = "Register";
+          btn.innerHTML = "Register";
+          signupbtn.innerText = "Login";
+          a = 1;
+        } else {
+          name.style.maxHeight = "0";
+          text.innerText = "Don't have an account?";
+          title.innerHTML = "Login";
+          btn.innerHTML = "Login";
+          signupbtn.innerText = "Register";
+          a = 0;
+        }
+      };
+    </script>
+  </body>
+</html>
